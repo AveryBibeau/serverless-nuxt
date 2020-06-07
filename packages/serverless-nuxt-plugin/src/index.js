@@ -109,7 +109,7 @@ class ServerlessNuxtPlugin {
         this.serverless.cli.consoleLog(`Serverless Nuxt Plugin: ${chalk.yellow('not found asset bucket')}`)
         return
       }
-      throw new Error('not found asset bucket')
+      throw new Error('not found asset bucket', e)
     }
 
     const servicePath = this.serverless.service.serverless.config.servicePath
