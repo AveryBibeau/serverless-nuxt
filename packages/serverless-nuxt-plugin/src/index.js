@@ -101,6 +101,7 @@ class ServerlessNuxtPlugin {
     const config = normlizeConfig(this.serverless.service.custom.nuxt || {})
 
     try {
+      console.log('headBucket', config.bucketName)
       await s3.headBucket({
         Bucket: config.bucketName,
       }).promise()
