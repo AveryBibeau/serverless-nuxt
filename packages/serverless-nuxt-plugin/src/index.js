@@ -106,7 +106,7 @@ class ServerlessNuxtPlugin {
       }).promise()
     } catch (e) {
       if (ignoreBucketExists) {
-        this.serverless.cli.consoleLog(`Serverless Nuxt Plugin: ${chalk.yellow('not found asset bucket')}`)
+        this.serverless.cli.consoleLog(`Serverless Nuxt Plugin: ${chalk.yellow('not found asset bucket')}, ${e}`)
         return
       }
       throw new Error('not found asset bucket', e)
